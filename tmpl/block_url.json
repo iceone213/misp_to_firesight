@@ -1,0 +1,23 @@
+{
+  "action": "BLOCK",
+  "enabled": true,
+  "type": "AccessRule",
+  "name": "Test_rule_misp_2",
+  "sendEventsToFMC": false,
+  "logFiles": false,
+  "logBegin": false,
+  "logEnd": false,
+  "vlanTags": {},
+  "urls": {
+    "literals": [
+      {
+        "url": "https://google.com.ua",
+        "type": "Url"
+      }
+    ]
+  },
+  "newComments": [
+    "comment1",
+    "comment2"
+  ]
+}

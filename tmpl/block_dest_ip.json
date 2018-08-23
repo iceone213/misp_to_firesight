@@ -1,0 +1,32 @@
+{
+  "action": "BLOCK",
+  "enabled": true,
+  "type": "AccessRule",
+  "name": "Test_rule_misp_3",
+  "sendEventsToFMC": false,
+  "logFiles": false,
+  "logBegin": false,
+  "logEnd": false,
+  "vlanTags": {},
+  "destinationNetworks": {
+    "literals": [
+      {
+        "type": "Host",
+        "value": "4.4.4.4"
+      }
+    ]
+  },
+  "sourceNetworks": {
+    "objects": [
+      {
+        "type": "NetworkGroup",
+        "name": "any",
+        "id": "69fa2a3a-4487-4e3c-816f-4098f684826e"
+      }
+    ]
+  },
+  "newComments": [
+    "comment1",
+    "comment2"
+  ]
+}

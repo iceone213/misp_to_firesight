@@ -1,0 +1,9 @@
+{
+  "type": "PolicyAssignment",
+  "policy": {
+    "type": "AccessPolicy",
+    "name": "AccessPolicy2",
+    "id": "accesspolicyUUID"
+  },
+  "targets": []
+}

@@ -3,8 +3,9 @@
 
 import base64
 import requests
-from obj.fmc_conf import *
+from instance import *
 from const import *
+from obj.fmc_conf import *
 
 class PyFMC:
 
@@ -43,7 +44,7 @@ class PyFMC:
     @staticmethod
     def login():
 
-        url = FmcConf().ip_addr + "/api/fmc_platform/v1/auth/generatetoken"
+        url = FMC_CONF.ip_addr + "/api/fmc_platform/v1/auth/generatetoken"
 
         base64string = base64.encodebytes((FMC_CONF.login + ":" + FMC_CONF.password).encode()).decode().rstrip()
         authstring = ("Basic %s" % base64string)
@@ -72,8 +73,12 @@ class PyFMC:
 
         headers = {'Authorization': authstring, 'X-auth-access-token': FMC_CONF.acc_token, 'X-auth-refresh-token': FMC_CONF.ref_token}
 
+        data = open(BLOCK_IP_TMPL_PATH, 'w')
+
+        # "{}"
+
         try:
-            resp = requests.post(url, headers=headers, verify=FMC_CONF.cer_loc)
+            resp = requests.post(url, headers=headers, data=json.dumps(data), verify=FMC_CONF.cer_loc)
             if resp is None:
                 raise ValueError("Response is undefined")
             if resp.status_code != 204:

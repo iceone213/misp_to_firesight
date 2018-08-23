@@ -1,0 +1,20 @@
+{
+  "type": "PolicyAssignment",
+  "policy": {
+    "type": "AccessPolicy",
+    "name": "AccessPolicy2",
+    "id": "accesspolicyUUID"
+  },
+  "targets": [
+    {
+      "id": "deviceUUID1",
+      "type": "Device",
+      "name": "FTD_Device1"
+    },
+    {
+      "id": "deviceUUID2",
+      "type": "Device",
+      "name": "FTD_Device2"
+    }
+  ]
+}

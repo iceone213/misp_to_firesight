@@ -1,15 +1,14 @@
 #!/usr/bin/env python
 
-
-from obj.misp_conf import *
-from obj.fmc_conf import *
-from pymisp import PyMISP
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-MISP_CONF = MispConf()
-FMC_CONF = FmcConf()
-MISP_INSTANCE = PyMISP(MISP_CONF.ip_addr, MISP_CONF.api_token, MISP_CONF.ver_cert, 'json')
+FMC_CONF_FILE_PATH = './json/fmc_conf.json'
+MISP_CONF_FILE_PATH = './json/misp_conf.json'
 
+BLOCK_IP_TMPL_PATH = "./tmpl/block_dest_ip.json"
+BLOCK_URL_TMPL_PATH = "./tmpl/block_url.json"
+DEPLOY_VER_TMPL_PATH = "./tmpl/deploy_ver.json"
+POLICY_ASSIGN_TMPL_PATH = "./tmpl/policy_assign_1.json"
 
