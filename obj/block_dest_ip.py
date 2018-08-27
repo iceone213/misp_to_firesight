@@ -23,7 +23,7 @@ class BlockDestIp:
         self.password = j['password']
         self.cer_loc = j['cer_loc']
         self.acpolicy_id = j['acpolicy_id']
-        self.acpolicy_name = j['acpolicpip install jsonpickley_name']
+        self.acpolicy_name = j['acpolicy_name']
         self.acc_token = j['acc_token']
         self.ref_token = j['ref_token']
         self.domain_uuid = j['domain_uuid']
